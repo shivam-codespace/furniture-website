@@ -1,12 +1,11 @@
 import { Helmet } from "react-helmet-async";
 import { Hero } from "@/features/home/sections/Hero";
+import { CategoryShowcase } from "@/features/home/sections/CategoryShowcase";
+import { SmallCategoryGrid } from "@/features/home/sections/SmallCategoryGrid";
 import { StatsBar } from "@/features/home/sections/StatsBar";
-import { OurStory } from "@/features/home/sections/OurStory";
-import { Collections } from "@/features/home/sections/Collections";
-import { WhyChoose } from "@/features/home/sections/WhyChoose";
 import { Process } from "@/features/home/sections/Process";
 import { IdentityBanner } from "@/features/home/sections/IdentityBanner";
-import { Gallery } from "@/features/home/sections/Gallery";
+import { NeedHelpBanner } from "@/features/home/sections/NeedHelpBanner";
 
 export default function Home() {
   return (
@@ -15,13 +14,12 @@ export default function Home() {
         <title>Vaanam Furnitures | Furniture Built on Trust</title>
       </Helmet>
       <Hero />
+      <CategoryShowcase />
+      <SmallCategoryGrid />
       <StatsBar />
-      <OurStory />
-      <Collections />
-      <WhyChoose />
       <Process />
       <IdentityBanner />
-      <Gallery />
+      <NeedHelpBanner />
     </>
   );
 }

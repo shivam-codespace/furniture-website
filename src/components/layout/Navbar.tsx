@@ -11,7 +11,7 @@ const NAV_LINKS = [
   { label: "Shop", href: "/shop" },
   { label: "Custom Studio", href: "/" },
   { label: "Our Story", href: "/" },
-  { label: "Why Vaanam", href: "/" },
+  { label: "Why Vaanam", href: "/why-vaanam" },
   { label: "Support", href: "/" },
 ];
 

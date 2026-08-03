@@ -1,23 +1,20 @@
 import { motion } from "framer-motion";
-import { Package } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { fadeUp, staggerContainer, staggerItem, viewportOnce } from "@/lib/motion";
 import woodLogsImg from "@/assets/images/workshop/wood-logs.jpg";
 import carpenterSawImg from "@/assets/images/workshop/carpenter-saw.jpg";
-import constructionCalloutsImg from "@/assets/images/passport/construction-callouts.jpg";
+import hingeImg from "@/assets/images/materials/hinge.jpg";
 import craftSandingImg from "@/assets/images/workshop/craft-sanding.jpg";
-import woodSlabImg from "@/assets/images/categories/wood-slab.jpg";
-import productMultiviewImg from "@/assets/images/products/product-multiview.jpg";
+import workshopCraftsmanImg from "@/assets/images/workshop/workshop-craftsman.jpg";
 import deliveryTruckImg from "@/assets/images/support/delivery-truck.jpg";
 
 const STEPS = [
-  { n: "01", title: "Wood Selection", description: "Carefully chosen seasoned wood", image: woodLogsImg },
-  { n: "02", title: "Cutting & Shaping", description: "Precision cutting for perfect strength", image: carpenterSawImg },
-  { n: "03", title: "Joinery & Assembly", description: "Expert hands, strong joinery", image: constructionCalloutsImg },
-  { n: "04", title: "Sanding", description: "Smooth sanding for perfect finish", image: craftSandingImg },
-  { n: "05", title: "Polishing", description: "Premium polish for long life", image: woodSlabImg },
-  { n: "06", title: "Quality Check", description: "Multi-point quality inspection", image: productMultiviewImg },
-  { n: "07", title: "Packaging", description: "Safe & secure packaging", image: null },
-  { n: "08", title: "Delivered", description: "On-time delivery with care", image: deliveryTruckImg },
+  { n: "01", title: "Premium Wood", image: woodLogsImg },
+  { n: "02", title: "Cutting & Shaping", image: carpenterSawImg },
+  { n: "03", title: "Joinery & Assembly", image: hingeImg },
+  { n: "04", title: "Sanding & Polishing", image: craftSandingImg },
+  { n: "05", title: "Quality Check", image: workshopCraftsmanImg },
+  { n: "06", title: "Delivered with Care", image: deliveryTruckImg },
 ];
 
 export function Process() {
@@ -25,54 +22,42 @@ export function Process() {
     <section className="bg-background py-20 md:py-28">
       <div className="container-luxury">
         <motion.div
-          variants={staggerContainer(0.1)}
+          variants={fadeUp}
           initial="hidden"
           whileInView="visible"
           viewport={viewportOnce}
-          className="mb-16 flex flex-col gap-4"
+          className="mb-16 text-center"
         >
-          <motion.span variants={staggerItem} className="text-xs font-semibold uppercase tracking-[0.25em] text-secondary-600">
-            Our Process
-          </motion.span>
-          <motion.h2 variants={fadeUp} className="font-heading text-4xl font-medium text-dark md:text-5xl">
+          <h2 className="font-heading text-3xl font-medium text-dark sm:text-4xl">
             How We Build Your Furniture
-          </motion.h2>
+          </h2>
         </motion.div>
 
         <motion.div
-          variants={staggerContainer(0.06)}
+          variants={staggerContainer(0.08)}
           initial="hidden"
           whileInView="visible"
           viewport={viewportOnce}
-          className="relative grid grid-cols-2 gap-x-4 gap-y-12 sm:grid-cols-4 lg:flex lg:items-start lg:justify-between"
+          className="flex flex-nowrap items-start justify-start gap-x-1 overflow-x-auto px-1 pb-2 sm:justify-center sm:gap-x-4 sm:overflow-visible sm:px-0 sm:pb-0"
         >
-          <div className="pointer-events-none absolute left-0 right-0 top-11 hidden border-t border-dashed border-primary-200 lg:block" />
-
-          {STEPS.map(({ n, title, description, image }) => (
-            <motion.div
-              key={n}
-              variants={staggerItem}
-              className="relative z-10 flex flex-col items-center gap-4 text-center lg:w-[11%]"
-            >
-              <div className="relative">
-                <div className="size-[88px] overflow-hidden rounded-full border-4 border-background bg-primary-100 shadow-sm ring-1 ring-dark/5">
-                  {image ? (
-                    <img src={image} alt={title} className="h-full w-full object-cover" />
-                  ) : (
-                    <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-primary-100 to-secondary-200">
-                      <Package className="size-7 text-primary-500" strokeWidth={1.3} />
-                    </div>
-                  )}
+          {STEPS.map(({ n, title, image }, i) => (
+            <div key={n} className="flex shrink-0 items-start">
+              <motion.div variants={staggerItem} className="flex w-14 shrink-0 flex-col items-center gap-1.5 text-center sm:w-28 sm:gap-3">
+                <div className="size-11 overflow-hidden rounded-full border border-dark/15 bg-primary-100 sm:size-20">
+                  <img src={image} alt={title} className="h-full w-full object-cover" />
                 </div>
-                <span className="absolute -bottom-1.5 left-1/2 flex h-6 w-9 -translate-x-1/2 items-center justify-center rounded-full bg-dark text-[10px] font-semibold text-white">
-                  {n}
-                </span>
-              </div>
-              <div className="flex flex-col gap-1 px-1">
-                <h3 className="font-heading text-sm text-dark">{title}</h3>
-                <p className="text-[11px] leading-snug text-dark/55">{description}</p>
-              </div>
-            </motion.div>
+                <div className="flex flex-col gap-0.5">
+                  <span className="text-[8px] font-semibold text-dark/70 sm:text-[10px]">{n}</span>
+                  <h3 className="font-heading text-[9px] leading-tight text-dark sm:text-sm">{title}</h3>
+                </div>
+              </motion.div>
+              {i < STEPS.length - 1 && (
+                <ArrowRight
+                  className="mt-5 hidden size-4 shrink-0 text-dark/20 sm:mt-9 sm:block"
+                  strokeWidth={1.5}
+                />
+              )}
+            </div>
           ))}
         </motion.div>
       </div>

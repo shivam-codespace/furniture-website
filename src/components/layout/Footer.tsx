@@ -6,15 +6,15 @@ import { Logo } from "@/components/common/Logo";
 const FOOTER_LINKS = [
   {
     title: "Shop",
-    links: ["Bedroom", "Living Room", "Dining Room", "Office", "Custom Furniture"],
+    links: ["Beds", "Sofas", "Dining", "Dressing Tables", "Office Furniture", "Mattresses & Pillow", "Chairs & Tables"],
   },
   {
     title: "Company",
-    links: ["Our Story", "Why Vaanam", "Craftsmanship", "Careers", "Contact Us"],
+    links: ["Our Story", "Why Vaanam", "Sustainability", "Careers", "Contact Us"],
   },
   {
     title: "Support",
-    links: ["Warranty", "Delivery & Installation", "Returns", "FAQ", "Track Order"],
+    links: ["Delivery & Installation", "Returns & Refunds", "Warranty", "FAQs", "Track Order"],
   },
 ];
 
@@ -64,9 +64,9 @@ export function Footer() {
         <div className="col-span-2 flex flex-col gap-5">
           <Logo light />
           <p className="max-w-xs text-sm leading-relaxed text-white/50">
-            Crafted by our family for over 75 years. Built for yours.
+            Crafted by our family for over 75 years.
             <br />
-            With trust. With pride. For generations.
+            Built for your family.
           </p>
         </div>
 

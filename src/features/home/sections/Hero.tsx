@@ -1,20 +1,20 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowRight, Play } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { fadeUp, staggerContainer, staggerItem } from "@/lib/motion";
-import showroomImg from "@/assets/images/hero/showroom.jpg";
 import bedroomAmberImg from "@/assets/images/products/bedroom-amber.jpg";
+import showroomImg from "@/assets/images/hero/showroom.jpg";
 import bedroomCleanImg from "@/assets/images/hero/bedroom-clean.jpg";
 
-const SLIDES = [showroomImg, bedroomAmberImg, bedroomCleanImg];
+const SLIDES = [bedroomAmberImg, showroomImg, bedroomCleanImg];
 
 export function Hero() {
   const [active, setActive] = useState(0);
 
   return (
-    <section className="relative h-[92vh] min-h-[620px] max-h-[840px] w-full overflow-hidden bg-dark">
+    <section className="relative h-[520px] w-full overflow-hidden bg-dark sm:h-[600px] lg:h-[660px]">
       {SLIDES.map((src, i) => (
         <img
           key={src}
@@ -27,53 +27,42 @@ export function Hero() {
         />
       ))}
 
-      <div className="absolute inset-0 bg-gradient-to-r from-dark via-dark/75 to-dark/10" />
-      <div className="absolute inset-0 bg-gradient-to-t from-dark/60 via-transparent to-dark/20" />
+      <div className="absolute inset-0 bg-gradient-to-r from-dark via-dark/70 to-dark/10" />
+      <div className="absolute inset-0 bg-gradient-to-t from-dark/50 via-transparent to-dark/10" />
 
-      <div className="container-luxury relative z-10 flex h-full flex-col justify-center pt-16">
+      <div className="container-luxury relative z-10 flex h-full flex-col justify-center pt-14">
         <motion.div
           variants={staggerContainer(0.14)}
           initial="hidden"
           animate="visible"
-          className="flex max-w-xl flex-col gap-6"
+          className="flex max-w-lg flex-col gap-5"
         >
           <motion.h1
             variants={fadeUp}
-            className="text-balance font-heading text-5xl font-medium leading-[1.08] text-white sm:text-6xl lg:text-[4.25rem]"
+            className="text-balance font-heading text-4xl font-medium leading-[1.1] text-white sm:text-5xl lg:text-[3.5rem]"
           >
-            Furniture
+            Furniture Crafted
             <br />
-            Built with Trust.
+            for Generations
           </motion.h1>
 
-          <motion.p variants={staggerItem} className="text-base font-medium text-secondary-200 sm:text-lg">
-            Crafted by our family for over 75 years.
+          <motion.p variants={staggerItem} className="max-w-sm text-sm leading-relaxed text-white/70 sm:text-base">
+            Timeless design. Honest materials. Made to be loved for life.
           </motion.p>
 
-          <motion.p variants={staggerItem} className="max-w-md text-sm leading-relaxed text-white/65 sm:text-base">
-            Every product comes with verified materials, real manufacturing photos and lifetime
-            support.
-          </motion.p>
-
-          <motion.div variants={staggerItem} className="mt-2 flex flex-wrap items-center gap-4">
+          <motion.div variants={staggerItem} className="mt-2">
             <Link
               to="/shop"
-              className="group inline-flex h-14 items-center gap-2.5 rounded-full bg-gold px-7 py-3.5 text-xs font-semibold tracking-wider text-dark transition-all duration-300 hover:bg-secondary-300 active:scale-[0.98]"
+              className="group inline-flex h-12 items-center gap-2.5 rounded-full border border-white/50 px-6 text-sm font-medium text-white transition-all duration-300 hover:border-white hover:bg-white/10"
             >
-              EXPLORE COLLECTION
+              Explore Collections
               <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" strokeWidth={2} />
             </Link>
-            <button className="group inline-flex h-14 items-center gap-2.5 rounded-full border border-white/40 px-7 py-3.5 text-xs font-semibold tracking-wider text-white transition-all duration-300 hover:border-white hover:bg-white/10">
-              <span className="flex size-5 items-center justify-center rounded-full bg-white/15">
-                <Play className="size-2.5 translate-x-px fill-white text-white" />
-              </span>
-              WATCH OUR STORY
-            </button>
           </motion.div>
         </motion.div>
       </div>
 
-      <div className="absolute bottom-8 left-6 z-10 flex items-center gap-2 md:left-16">
+      <div className="absolute bottom-7 left-6 z-10 flex items-center gap-2 md:left-16">
         {SLIDES.map((_, i) => (
           <button
             key={i}
