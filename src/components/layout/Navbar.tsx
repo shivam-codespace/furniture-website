@@ -9,8 +9,8 @@ import { SearchDrawer } from "@/components/layout/SearchDrawer";
 const NAV_LINKS = [
   { label: "Home", href: "/" },
   { label: "Shop", href: "/shop" },
-  { label: "Custom Studio", href: "/" },
-  { label: "Our Story", href: "/" },
+  { label: "Custom Studio", href: "/custom-studio" },
+  { label: "Our Story", href: "/our-story" },
   { label: "Why Vaanam", href: "/why-vaanam" },
   { label: "Support", href: "/" },
 ];

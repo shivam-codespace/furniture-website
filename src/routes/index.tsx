@@ -4,6 +4,8 @@ import Home from "@/features/home/pages/Home";
 import Shop from "@/features/shop/pages/Shop";
 import ProductDetail from "@/features/product/pages/ProductDetail";
 import WhyVaanam from "@/features/why-vaanam/pages/WhyVaanam";
+import OurStory from "@/features/our-story/pages/OurStory";
+import CustomStudio from "@/features/custom-studio/pages/CustomStudio";
 
 export function AppRouter() {
   return (
@@ -13,6 +15,8 @@ export function AppRouter() {
         <Route path="/shop" element={<Shop />} />
         <Route path="/product/:productId" element={<ProductDetail />} />
         <Route path="/why-vaanam" element={<WhyVaanam />} />
+        <Route path="/our-story" element={<OurStory />} />
+        <Route path="/custom-studio" element={<CustomStudio />} />
       </Route>
     </Routes>
   );
