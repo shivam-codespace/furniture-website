@@ -1,6 +1,5 @@
 import { Helmet } from "react-helmet-async";
 import { Sidebar } from "@/features/shop/sections/Sidebar";
-import { MobileFilters } from "@/features/shop/sections/MobileFilters";
 import { ShopHero } from "@/features/shop/sections/ShopHero";
 import { CategoryPills } from "@/features/shop/sections/CategoryPills";
 import { ProductGrid } from "@/features/shop/sections/ProductGrid";
@@ -24,7 +23,6 @@ export default function Shop() {
           </aside>
 
           <div className="flex min-w-0 flex-1 flex-col gap-10">
-            <MobileFilters />
             <CategoryPills />
             <ProductGrid />
           </div>

@@ -20,16 +20,16 @@ export function CategoryPills() {
             <button
               key={cat.id}
               className={cn(
-                "flex w-[100px] shrink-0 flex-col items-center gap-2 rounded-2xl border px-3 py-4 transition-colors",
+                "flex w-[64px] shrink-0 flex-col items-center gap-1 rounded-xl border px-1.5 py-2 transition-colors sm:w-[100px] sm:gap-2 sm:rounded-2xl sm:px-3 sm:py-4",
                 active
                   ? "border-primary bg-primary-50"
                   : "border-dark/10 bg-white hover:border-primary/40",
               )}
             >
-              <Icon className={cn("size-6", active ? "text-primary-700" : "text-dark/60")} strokeWidth={1.5} />
+              <Icon className={cn("size-4 sm:size-6", active ? "text-primary-700" : "text-dark/60")} strokeWidth={1.5} />
               <span
                 className={cn(
-                  "text-center text-xs font-medium leading-tight",
+                  "text-center text-[9px] font-medium leading-tight sm:text-xs",
                   active ? "text-primary-800" : "text-dark/70",
                 )}
               >
@@ -42,9 +42,9 @@ export function CategoryPills() {
       <button
         aria-label="Scroll categories"
         onClick={() => scrollerRef.current?.scrollBy({ left: 220, behavior: "smooth" })}
-        className="flex size-9 shrink-0 items-center justify-center rounded-full border border-dark/15 bg-white text-dark/60 shadow-sm transition-colors hover:border-primary hover:text-primary"
+        className="flex size-7 shrink-0 items-center justify-center rounded-full border border-dark/15 bg-white text-dark/60 shadow-sm transition-colors hover:border-primary hover:text-primary sm:size-9"
       >
-        <ChevronRight className="size-4" strokeWidth={2} />
+        <ChevronRight className="size-3 sm:size-4" strokeWidth={2} />
       </button>
     </div>
   );

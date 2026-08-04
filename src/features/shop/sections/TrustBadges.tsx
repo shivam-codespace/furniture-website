@@ -30,16 +30,19 @@ const ITEMS = [
 
 export function TrustBadges() {
   return (
-    <section className="rounded-2xl bg-primary-50/60 px-6 py-8 sm:px-8">
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-5">
+    <section className="rounded-xl bg-primary-50/60 px-2 py-3 sm:rounded-2xl sm:px-8 sm:py-8">
+      <div className="grid grid-cols-5 gap-1 sm:grid-cols-2 sm:gap-6 lg:grid-cols-5">
         {ITEMS.map(({ icon: Icon, title, description }) => (
-          <div key={title} className="flex items-start gap-3.5">
-            <span className="flex size-11 shrink-0 items-center justify-center rounded-full bg-white text-primary">
-              <Icon className="size-5" strokeWidth={1.5} />
+          <div
+            key={title}
+            className="flex flex-col items-center gap-1 text-center sm:flex-row sm:items-start sm:gap-3.5 sm:text-left"
+          >
+            <span className="flex size-7 shrink-0 items-center justify-center rounded-full bg-white text-primary sm:size-11">
+              <Icon className="size-3 sm:size-5" strokeWidth={1.5} />
             </span>
             <div className="flex flex-col gap-0.5">
-              <h3 className="text-sm font-semibold text-dark">{title}</h3>
-              <p className="text-xs leading-snug text-dark/55">{description}</p>
+              <h3 className="text-[8px] font-semibold leading-tight text-dark sm:text-sm">{title}</h3>
+              <p className="hidden text-xs leading-snug text-dark/55 sm:block">{description}</p>
             </div>
           </div>
         ))}

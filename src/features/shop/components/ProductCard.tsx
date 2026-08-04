@@ -21,9 +21,9 @@ export function ProductCard({ product }: { product: Product }) {
   return (
     <Link
       to={`/product/${product.id}`}
-      className="group flex flex-col overflow-hidden rounded-2xl border border-dark/8 bg-white transition-shadow hover:shadow-lg"
+      className="group flex flex-col overflow-hidden rounded-lg border border-dark/8 bg-white transition-shadow hover:shadow-lg sm:rounded-2xl"
     >
-      <div className="relative aspect-[4/3] overflow-hidden bg-primary-50">
+      <div className="relative aspect-[3/2] overflow-hidden bg-primary-50 sm:aspect-[4/3]">
         <img
           src={product.image}
           alt={product.name}
@@ -32,7 +32,7 @@ export function ProductCard({ product }: { product: Product }) {
         {product.badge && (
           <span
             className={cn(
-              "absolute left-3 top-3 rounded-md px-2 py-1 text-[10px] font-bold tracking-wide",
+              "absolute left-1 top-1 rounded px-1 py-0.5 text-[7px] font-bold tracking-wide sm:left-3 sm:top-3 sm:rounded-md sm:px-2 sm:py-1 sm:text-[10px]",
               BADGE_STYLES[product.badge.tone],
             )}
           >
@@ -45,35 +45,39 @@ export function ProductCard({ product }: { product: Product }) {
             setWishlisted((v) => !v);
           }}
           aria-label="Toggle wishlist"
-          className="absolute right-3 top-3 flex size-8 items-center justify-center rounded-full bg-white/95 text-dark/60 shadow-sm transition-colors hover:text-primary"
+          className="absolute right-1 top-1 flex size-5 items-center justify-center rounded-full bg-white/95 text-dark/60 shadow-sm transition-colors hover:text-primary sm:right-3 sm:top-3 sm:size-8"
         >
-          <Heart className={cn("size-4", wishlisted && "fill-primary text-primary")} strokeWidth={1.75} />
+          <Heart className={cn("size-2.5 sm:size-4", wishlisted && "fill-primary text-primary")} strokeWidth={1.75} />
         </button>
         <span
           aria-label="Quick view"
-          className="absolute bottom-3 right-3 flex size-8 items-center justify-center rounded-md bg-white/95 text-dark/60 shadow-sm transition-colors group-hover:text-primary"
+          className="absolute bottom-1 right-1 hidden size-5 items-center justify-center rounded-md bg-white/95 text-dark/60 shadow-sm transition-colors group-hover:text-primary sm:flex sm:bottom-3 sm:right-3 sm:size-8"
         >
-          <Scan className="size-4" strokeWidth={1.75} />
+          <Scan className="size-2.5 sm:size-4" strokeWidth={1.75} />
         </span>
       </div>
 
-      <div className="flex flex-1 flex-col gap-2 p-4">
-        <h3 className="font-heading text-base leading-tight text-dark">{product.name}</h3>
-        <p className="text-xs text-dark/50">{product.variant}</p>
+      <div className="flex flex-1 flex-col gap-0.5 p-1 sm:gap-2 sm:p-4">
+        <h3 className="line-clamp-2 font-heading text-[11px] leading-tight text-dark sm:line-clamp-none sm:text-base">
+          {product.name}
+        </h3>
+        <p className="hidden text-xs text-dark/50 sm:block">{product.variant}</p>
 
-        <div className="flex items-center gap-1.5 text-xs">
+        <div className="hidden items-center gap-1.5 text-xs sm:flex">
           <Star className="size-3.5 fill-gold text-gold" strokeWidth={0} />
           <span className="font-semibold text-dark">{product.rating}</span>
           <span className="text-dark/40">({product.reviewCount})</span>
         </div>
 
-        <div className="flex items-baseline gap-2">
-          <span className="font-heading text-lg font-semibold text-dark">{formatINR(product.price)}</span>
-          <span className="text-xs text-dark/35 line-through">{formatINR(product.originalPrice)}</span>
-          <span className="text-xs font-semibold text-success">{product.discountPercent}% OFF</span>
+        <div className="flex flex-wrap items-baseline gap-1 sm:gap-2">
+          <span className="font-heading text-[11px] font-semibold text-dark sm:text-lg">{formatINR(product.price)}</span>
+          <span className="hidden text-[9px] text-dark/35 line-through sm:inline sm:text-xs">
+            {formatINR(product.originalPrice)}
+          </span>
+          <span className="hidden text-xs font-semibold text-success sm:inline">{product.discountPercent}% OFF</span>
         </div>
 
-        <div className="mt-1 flex flex-wrap gap-1.5">
+        <div className="mt-1 hidden flex-wrap gap-1.5 sm:flex">
           {product.tags.map((tag) => (
             <span
               key={tag}

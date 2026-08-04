@@ -14,9 +14,9 @@ export function MobileFilters() {
     <div className="lg:hidden">
       <button
         onClick={() => setOpen(true)}
-        className="flex w-full items-center justify-center gap-2 rounded-full border border-dark/20 bg-white px-5 py-3 text-sm font-semibold text-dark transition-colors hover:border-dark"
+        className="flex shrink-0 items-center gap-1 rounded-full border border-dark/20 bg-white px-2 py-1.5 text-[10px] font-semibold text-dark transition-colors hover:border-dark sm:gap-1.5 sm:px-3 sm:py-2 sm:text-xs"
       >
-        <SlidersHorizontal className="size-4" strokeWidth={1.75} />
+        <SlidersHorizontal className="size-3 sm:size-3.5" strokeWidth={1.75} />
         Filters
       </button>
 
