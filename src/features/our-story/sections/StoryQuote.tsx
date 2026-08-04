@@ -15,7 +15,7 @@ export function StoryQuote() {
           <p className="text-balance font-heading text-xl italic leading-relaxed text-dark sm:text-2xl">
             &ldquo;We don&apos;t just build furniture. We build relationships that last for generations.&rdquo;
           </p>
-          <span className="text-sm font-semibold text-primary">— The Vaanam Family</span>
+          <span className="text-sm font-semibold text-primary">— The Sharma Family</span>
         </motion.div>
       </div>
     </section>

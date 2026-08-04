@@ -58,7 +58,7 @@ export function SupportHero() {
       <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-[58%] md:block">
         <img
           src={livingRoomImg}
-          alt="A warm, welcoming living space furnished by Vaanam"
+          alt="A warm, welcoming living space furnished by Sharma"
           className="h-full w-full object-cover"
         />
         <div className="absolute inset-y-0 left-0 w-1/2 bg-gradient-to-r from-background via-background/60 to-transparent" />
@@ -99,7 +99,7 @@ export function SupportHero() {
         <div className="relative overflow-hidden rounded-2xl">
           <img
             src={livingRoomImg}
-            alt="A warm, welcoming living space furnished by Vaanam"
+            alt="A warm, welcoming living space furnished by Sharma"
             className="aspect-[4/3] w-full object-cover"
           />
           <div className="absolute inset-x-4 bottom-4">

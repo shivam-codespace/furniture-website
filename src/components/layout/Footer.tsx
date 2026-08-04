@@ -19,7 +19,7 @@ const FOOTER_LINKS = [
   {
     title: "Company",
     links: [
-      { label: "Why Vaanam", href: "/why-vaanam" },
+      { label: "Why Sharma", href: "/why-sharma" },
       { label: "Our Story", href: "/our-story" },
       { label: "Custom Studio", href: "/custom-studio" },
       { label: "Support", href: "/support" },
@@ -140,7 +140,7 @@ export function Footer() {
 
       <div className="border-t border-white/10">
         <div className="container-luxury flex flex-col items-center justify-between gap-3 py-6 text-xs text-white/40 sm:flex-row">
-          <span>© {new Date().getFullYear()} Vaanam Furnitures. All rights reserved.</span>
+          <span>© {new Date().getFullYear()} Sharma Furnitures. All rights reserved.</span>
           <div className="flex items-center gap-5">
             <Link to="/" className="transition-colors hover:text-white/70">
               Privacy Policy

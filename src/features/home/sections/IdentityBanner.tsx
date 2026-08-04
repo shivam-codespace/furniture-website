@@ -42,7 +42,7 @@ export function IdentityBanner() {
               <div className="overflow-hidden rounded-2xl bg-white">
                 <img
                   src={productStudioImg}
-                  alt="Vaanam bed with digital furniture passport"
+                  alt="Sharma bed with digital furniture passport"
                   className="aspect-[4/3] w-full object-cover object-bottom"
                 />
               </div>

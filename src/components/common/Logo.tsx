@@ -17,7 +17,7 @@ export function Logo({ light = false, className }: LogoProps) {
             light ? "text-white" : "text-dark",
           )}
         >
-          VAANAM
+          SHARMA
         </span>
         <span
           className={cn(

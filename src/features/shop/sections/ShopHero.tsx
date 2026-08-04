@@ -15,7 +15,7 @@ export function ShopHero() {
           <p className="max-w-sm text-sm leading-relaxed text-dark/60">
             Real materials. Real photos. Real transparency.
             <br />
-            Only on Vaanam Furnitures.
+            Only on Sharma Furnitures.
           </p>
           <button className="group mt-1 inline-flex h-11 w-fit items-center gap-2.5 rounded-full bg-dark px-5 text-xs font-semibold tracking-wider text-white transition-colors hover:bg-primary-700">
             Explore Our Collection
@@ -25,7 +25,7 @@ export function ShopHero() {
         <div className="h-[230px] w-full sm:h-[270px] lg:h-[308px]">
           <img
             src={bedroomCleanImg}
-            alt="A Vaanam bed styled in a sunlit bedroom"
+            alt="A Sharma bed styled in a sunlit bedroom"
             className="h-full w-full object-cover"
           />
         </div>

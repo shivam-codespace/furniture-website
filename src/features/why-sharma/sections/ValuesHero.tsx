@@ -29,7 +29,7 @@ export function ValuesHero() {
       <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-[58%] items-center justify-center md:flex">
         <img
           src={workshopCraftsmanImg}
-          alt="Vaanam craftsman shaping wood in the workshop"
+          alt="Sharma craftsman shaping wood in the workshop"
           className="absolute inset-0 h-full w-full object-cover"
         />
         <div className="absolute inset-y-0 left-0 w-1/2 bg-gradient-to-r from-background via-background/60 to-transparent" />
@@ -47,7 +47,7 @@ export function ValuesHero() {
           className="flex max-w-xl flex-col gap-5 pb-6 md:py-[47px]"
         >
           <motion.span variants={staggerItem} className="text-xs font-semibold uppercase tracking-[0.25em] text-primary">
-            Why Vaanam
+            Why Sharma
           </motion.span>
           <motion.h1
             variants={fadeUp}
@@ -59,7 +59,7 @@ export function ValuesHero() {
           </motion.h1>
           <motion.span variants={staggerItem} className="h-px w-16 bg-primary" />
           <motion.p variants={staggerItem} className="max-w-md text-sm leading-relaxed text-dark/60 sm:text-base">
-            At Vaanam Furnitures, we believe furniture is more than wood and design. It&apos;s about trust,
+            At Sharma Furnitures, we believe furniture is more than wood and design. It&apos;s about trust,
             transparency, and a promise that lasts for generations.
           </motion.p>
           <motion.p variants={staggerItem} className="max-w-md text-sm leading-relaxed sm:text-base">
@@ -91,7 +91,7 @@ export function ValuesHero() {
         <div className="relative overflow-hidden rounded-2xl">
           <img
             src={workshopCraftsmanImg}
-            alt="Vaanam craftsman shaping wood in the workshop"
+            alt="Sharma craftsman shaping wood in the workshop"
             className="aspect-[6/5] w-full object-cover"
           />
           <div className="absolute inset-x-6 bottom-6 rounded-2xl border border-white/15 bg-dark/40 px-8 py-8 text-white backdrop-blur-md">

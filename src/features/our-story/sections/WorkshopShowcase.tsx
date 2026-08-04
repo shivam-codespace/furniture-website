@@ -35,7 +35,7 @@ export function WorkshopShowcase() {
             </motion.p>
             <motion.div variants={staggerItem}>
               <Link
-                to="/why-vaanam"
+                to="/why-sharma"
                 className="group mt-2 inline-flex h-11 items-center gap-2 rounded-full border border-dark/20 px-5 text-sm font-semibold text-dark transition-colors hover:border-dark/40"
               >
                 See Our Process
@@ -54,7 +54,7 @@ export function WorkshopShowcase() {
             <motion.div variants={staggerItem} className="overflow-hidden rounded-2xl">
               <img
                 src={workshopCraftsmanImg}
-                alt="Vaanam workshop floor"
+                alt="Sharma workshop floor"
                 className="h-[220px] w-full object-cover sm:h-full"
               />
             </motion.div>

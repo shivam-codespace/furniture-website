@@ -11,7 +11,7 @@ export default function OurStory() {
   return (
     <>
       <Helmet>
-        <title>Our Story | Vaanam Furnitures</title>
+        <title>Our Story | Sharma Furnitures</title>
       </Helmet>
       <StoryHero />
       <LegacyTimeline />

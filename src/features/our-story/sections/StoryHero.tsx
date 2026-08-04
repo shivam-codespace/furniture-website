@@ -10,7 +10,7 @@ export function StoryHero() {
       <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-[58%] md:block">
         <img
           src={workshopCraftsmanImg}
-          alt="Vaanam craftsman shaping wood in the workshop"
+          alt="Sharma craftsman shaping wood in the workshop"
           className="h-full w-full object-cover"
         />
         <div className="absolute inset-y-0 left-0 w-1/2 bg-gradient-to-r from-background via-background/60 to-transparent" />
@@ -42,7 +42,7 @@ export function StoryHero() {
           </motion.p>
           <motion.div variants={staggerItem} className="mt-2 flex flex-wrap items-center gap-4">
             <Link
-              to="/why-vaanam"
+              to="/why-sharma"
               className="group inline-flex h-12 items-center gap-2 rounded-full bg-dark px-6 text-sm font-semibold text-white transition-colors hover:bg-primary-700"
             >
               Our Journey
@@ -63,7 +63,7 @@ export function StoryHero() {
         <div className="overflow-hidden rounded-2xl">
           <img
             src={workshopCraftsmanImg}
-            alt="Vaanam craftsman shaping wood in the workshop"
+            alt="Sharma craftsman shaping wood in the workshop"
             className="aspect-[6/5] w-full object-cover"
           />
         </div>

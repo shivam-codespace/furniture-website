@@ -6,7 +6,7 @@ import storeImg from "@/assets/images/hero/showroom.jpg";
 const SUPPORT_HOURS = [
   { icon: Calendar, label: "Monday - Saturday", value: "9:30 AM - 7:30 PM" },
   { icon: Clock, label: "Sunday", value: "10:00 AM - 5:00 PM" },
-  { icon: Mail, label: "Email Support", value: "support@vaanamfurnitures.com" },
+  { icon: Mail, label: "Email Support", value: "support@sharmafurnitures.com" },
   { icon: Timer, label: "Response Time", value: "Within 2 Hours" },
 ];
 
@@ -57,14 +57,14 @@ export function ContactInfo() {
               <div className="flex items-start gap-2.5">
                 <Mail className="mt-0.5 size-4 shrink-0 text-primary" strokeWidth={1.6} />
                 <div>
-                  <p className="font-medium text-dark">support@vaanamfurnitures.com</p>
+                  <p className="font-medium text-dark">support@sharmafurnitures.com</p>
                   <p className="text-xs text-dark/50">We reply within 2 hours</p>
                 </div>
               </div>
               <div className="flex items-start gap-2.5">
                 <MapPin className="mt-0.5 size-4 shrink-0 text-primary" strokeWidth={1.6} />
                 <div>
-                  <p className="font-medium text-dark">Vaanam Furnitures</p>
+                  <p className="font-medium text-dark">Sharma Furnitures</p>
                   <p className="text-xs text-dark/50">123, Heritage Street, Jodhpur, Rajasthan - 342001, India</p>
                 </div>
               </div>
@@ -80,7 +80,7 @@ export function ContactInfo() {
           >
             <img
               src={storeImg}
-              alt="Vaanam Furnitures showroom"
+              alt="Sharma Furnitures showroom"
               className="h-full min-h-[220px] w-full object-cover"
             />
           </motion.div>

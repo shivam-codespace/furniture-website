@@ -30,7 +30,7 @@ export function PromiseBanner() {
 
             <motion.div variants={staggerItem} className="md:ml-auto md:text-right">
               <p className="text-sm text-white/70">With Respect &amp; Gratitude,</p>
-              <p className="mt-1 font-heading text-2xl italic text-gold">The Vaanam Family</p>
+              <p className="mt-1 font-heading text-2xl italic text-gold">The Sharma Family</p>
               <p className="mt-1 text-sm text-white/60">Four Generations. One Promise.</p>
             </motion.div>
           </div>

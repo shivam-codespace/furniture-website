@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       <Helmet>
-        <title>Vaanam Furnitures | Furniture Built on Trust</title>
+        <title>Sharma Furnitures | Furniture Built on Trust</title>
       </Helmet>
       <Hero />
       <CategoryShowcase />

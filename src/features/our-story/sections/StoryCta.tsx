@@ -23,7 +23,7 @@ export function StoryCta() {
               Be a Part of Our Story
             </motion.h2>
             <motion.p variants={staggerItem} className="text-sm leading-relaxed text-white/65">
-              When you choose Vaanam, you become a part of our family and our journey.
+              When you choose Sharma, you become a part of our family and our journey.
             </motion.p>
             <motion.div variants={staggerItem}>
               <Link

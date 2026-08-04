@@ -16,7 +16,7 @@ export function StillNeedHelp() {
         >
           <img
             src={craftsmanImg}
-            alt="A Vaanam support specialist ready to help"
+            alt="A Sharma support specialist ready to help"
             className="absolute inset-0 h-full w-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-secondary-100 via-secondary-100/85 to-transparent" />

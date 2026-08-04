@@ -10,7 +10,7 @@ export default function Support() {
   return (
     <>
       <Helmet>
-        <title>Support | Vaanam Furnitures</title>
+        <title>Support | Sharma Furnitures</title>
       </Helmet>
       <SupportHero />
       <HelpCategories />

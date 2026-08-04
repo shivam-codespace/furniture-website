@@ -12,7 +12,7 @@ const TRADITIONAL = [
   "No long-term relationship",
 ];
 
-const VAANAM_WAY = [
+const SHARMA_WAY = [
   "Complete transparency in materials & process",
   "Real photos from our own workshop",
   "Furniture Passport with every product",
@@ -53,9 +53,9 @@ export function ComparisonSection() {
           </motion.div>
 
           <motion.div variants={staggerItem} className="rounded-2xl bg-primary-50 p-8">
-            <h3 className="font-heading text-lg text-primary-700">The Vaanam Way</h3>
+            <h3 className="font-heading text-lg text-primary-700">The Sharma Way</h3>
             <ul className="mt-6 flex flex-col gap-4">
-              {VAANAM_WAY.map((item) => (
+              {SHARMA_WAY.map((item) => (
                 <li key={item} className="flex items-start gap-3 text-sm text-dark/70">
                   <CircleCheck className="mt-0.5 size-4 shrink-0 text-primary" strokeWidth={2} />
                   {item}
@@ -69,7 +69,7 @@ export function ComparisonSection() {
             <div className="absolute inset-0 bg-gradient-to-r from-dark from-45% via-dark/75 to-transparent" />
             <div className="relative flex h-full min-h-[280px] flex-col justify-between gap-6 p-8 text-white">
               <p className="max-w-[220px] text-lg font-medium leading-snug">
-                Experience the Vaanam Difference. Because you and your family deserve nothing less.
+                Experience the Sharma Difference. Because you and your family deserve nothing less.
               </p>
               <Link
                 to="/shop"

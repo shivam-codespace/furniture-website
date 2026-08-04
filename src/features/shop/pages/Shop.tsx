@@ -12,7 +12,7 @@ export default function Shop() {
   return (
     <>
       <Helmet>
-        <title>Shop Beds & Furniture | Vaanam Furnitures</title>
+        <title>Shop Beds & Furniture | Sharma Furnitures</title>
       </Helmet>
 
       <div className="container-luxury flex flex-col gap-8 py-8">

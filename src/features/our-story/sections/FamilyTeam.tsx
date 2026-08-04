@@ -44,7 +44,7 @@ export function FamilyTeam() {
           className="text-center"
         >
           <span className="text-xs font-semibold uppercase tracking-[0.25em] text-primary">
-            Meet the Family Behind Vaanam
+            Meet the Family Behind Sharma
           </span>
         </motion.div>
 

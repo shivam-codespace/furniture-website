@@ -69,7 +69,7 @@ export default function CustomStudio() {
   return (
     <>
       <Helmet>
-        <title>Custom Studio | Vaanam Furnitures</title>
+        <title>Custom Studio | Sharma Furnitures</title>
       </Helmet>
 
       <div className="bg-background pt-[54px] md:pt-[67px]">

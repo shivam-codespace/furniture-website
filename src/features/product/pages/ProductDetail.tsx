@@ -31,7 +31,7 @@ export default function ProductDetail() {
   return (
     <>
       <Helmet>
-        <title>{product.name} | Vaanam Furnitures</title>
+        <title>{product.name} | Sharma Furnitures</title>
       </Helmet>
 
       <div className="pb-20">

@@ -24,7 +24,7 @@ export function BetterExperience() {
             className="flex flex-col gap-6"
           >
             <motion.span variants={staggerItem} className="text-xs font-semibold uppercase tracking-[0.25em] text-primary">
-              Why Choose Vaanam
+              Why Choose Sharma
             </motion.span>
             <motion.h2
               variants={fadeUp}
@@ -60,7 +60,7 @@ export function BetterExperience() {
             <div className="overflow-hidden rounded-2xl">
               <img
                 src={bedroomAmberImg}
-                alt="A Vaanam furnished bedroom"
+                alt="A Sharma furnished bedroom"
                 className="h-[320px] w-full object-cover sm:h-[420px] lg:h-[480px]"
               />
             </div>
@@ -69,7 +69,7 @@ export function BetterExperience() {
               <p className="mt-1 text-sm leading-relaxed text-white/85">
                 We don&apos;t build furniture to sell. We build it to stay in your family for generations.
               </p>
-              <p className="mt-3 text-xs font-semibold text-white/50">— The Vaanam Family</p>
+              <p className="mt-3 text-xs font-semibold text-white/50">— The Sharma Family</p>
             </div>
           </motion.div>
         </div>
