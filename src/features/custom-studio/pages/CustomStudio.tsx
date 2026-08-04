@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet-async";
 import { ChevronDown, ChevronRight, Heart, PackageCheck, ShieldCheck, Sparkles, Truck } from "lucide-react";
 import { StepIndicator } from "@/features/custom-studio/components/StepIndicator";
 import { CustomizePanel } from "@/features/custom-studio/components/CustomizePanel";
+import { MobileCustomize } from "@/features/custom-studio/components/MobileCustomize";
 import { ViewerPanel } from "@/features/custom-studio/components/ViewerPanel";
 import { SummaryBar } from "@/features/custom-studio/components/SummaryBar";
 import { MaterialTransparency } from "@/features/custom-studio/components/MaterialTransparency";
@@ -86,13 +87,20 @@ export default function CustomStudio() {
         <div className="container-luxury pb-6">
           <div className="flex flex-col justify-between gap-4 lg:flex-row lg:items-start">
             <div>
-              <h1 className="font-heading text-3xl font-medium text-dark sm:text-4xl">Design Your Dream Furniture</h1>
-              <p className="mt-1.5 text-sm text-dark/55">Crafted by you. Built by us. Delivered to your home.</p>
+              <h1 className="font-heading text-xl font-medium text-dark sm:text-3xl lg:text-4xl">
+                Design Your Dream Furniture
+              </h1>
+              <p className="mt-1 text-xs text-dark/55 sm:mt-1.5 sm:text-sm">
+                Crafted by you. Built by us. Delivered to your home.
+              </p>
             </div>
-            <div className="flex flex-wrap gap-x-6 gap-y-2">
+            <div className="flex flex-nowrap gap-x-4 gap-y-2 overflow-x-auto pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:flex-wrap sm:gap-x-6 sm:overflow-visible sm:pb-0">
               {TRUST_BADGES.map(({ icon: Icon, label }) => (
-                <div key={label} className="flex items-center gap-2 text-xs font-medium text-dark/60">
-                  <Icon className="size-4 text-primary" strokeWidth={1.6} />
+                <div
+                  key={label}
+                  className="flex shrink-0 items-center gap-1.5 whitespace-nowrap text-[10px] font-medium text-dark/60 sm:gap-2 sm:text-xs"
+                >
+                  <Icon className="size-3 text-primary sm:size-4" strokeWidth={1.6} />
                   {label}
                 </div>
               ))}
@@ -102,11 +110,15 @@ export default function CustomStudio() {
           <div className="mt-6 overflow-x-auto pb-1">
             <StepIndicator activeStep={1} />
           </div>
+
+          <div className="mt-4 lg:hidden">
+            <MobileCustomize value={customization} onChange={handleChange} onToggleAddon={handleToggleAddon} />
+          </div>
         </div>
 
         <div className="container-luxury pb-16">
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-[320px_1fr]">
-            <aside className="flex flex-col gap-6">
+            <aside className="hidden flex-col gap-6 lg:flex">
               <div className="flex flex-col gap-3">
                 <h2 className="text-sm font-semibold text-dark">1. Choose Product</h2>
                 <div className="relative">

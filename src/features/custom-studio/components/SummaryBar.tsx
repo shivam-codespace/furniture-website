@@ -28,17 +28,17 @@ export function SummaryBar({ value }: { value: CustomizationState }) {
   ];
 
   return (
-    <div className="rounded-2xl border border-dark/8 bg-white p-5 sm:p-6">
+    <div className="rounded-2xl border border-dark/8 bg-white p-4 sm:p-6">
       <h3 className="text-sm font-semibold text-dark">Your Custom Bed Summary</h3>
-      <div className="mt-5 grid grid-cols-3 gap-y-5 sm:grid-cols-4 lg:grid-cols-7">
+      <div className="mt-4 flex flex-nowrap gap-4 overflow-x-auto pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:mt-5 sm:grid sm:grid-cols-4 sm:gap-y-5 sm:overflow-visible sm:pb-0 lg:grid-cols-7">
         {items.map(({ icon: Icon, label, value: v }) => (
-          <div key={label} className="flex flex-col items-center gap-2 text-center">
-            <span className="flex size-10 items-center justify-center rounded-full bg-primary-50 text-primary">
-              <Icon className="size-5" strokeWidth={1.6} />
+          <div key={label} className="flex shrink-0 flex-col items-center gap-1.5 text-center sm:gap-2">
+            <span className="flex size-8 shrink-0 items-center justify-center rounded-full bg-primary-50 text-primary sm:size-10">
+              <Icon className="size-3.5 sm:size-5" strokeWidth={1.6} />
             </span>
-            <div className="flex flex-col">
-              <span className="text-xs font-semibold text-dark">{label}</span>
-              <span className="text-[11px] text-dark/50">{v}</span>
+            <div className="flex w-14 flex-col sm:w-auto">
+              <span className="truncate text-[9px] font-semibold text-dark sm:text-xs">{label}</span>
+              <span className="truncate text-[8px] text-dark/50 sm:text-[11px]">{v}</span>
             </div>
           </div>
         ))}

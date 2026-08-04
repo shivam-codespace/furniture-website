@@ -17,12 +17,12 @@ export function WhyCustomMade() {
           <p className="mt-2 text-sm text-dark/55">Every detail is crafted as per your preference</p>
         </div>
 
-        <div className="mt-10 grid grid-cols-2 gap-8 sm:grid-cols-5">
+        <div className="mt-8 flex flex-nowrap gap-4 overflow-x-auto pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:mt-10 sm:grid sm:grid-cols-5 sm:gap-8 sm:overflow-visible sm:pb-0">
           {REASONS.map(({ icon: Icon, title, desc }) => (
-            <div key={title} className="flex flex-col items-center gap-2.5 text-center">
-              <Icon className="size-7 text-primary" strokeWidth={1.4} />
-              <h3 className="text-sm font-semibold text-dark">{title}</h3>
-              <p className="text-xs leading-relaxed text-dark/50">{desc}</p>
+            <div key={title} className="flex w-24 shrink-0 flex-col items-center gap-1.5 text-center sm:w-auto sm:gap-2.5">
+              <Icon className="size-5 text-primary sm:size-7" strokeWidth={1.4} />
+              <h3 className="text-[10px] font-semibold leading-tight text-dark sm:text-sm">{title}</h3>
+              <p className="hidden text-xs leading-relaxed text-dark/50 sm:block">{desc}</p>
             </div>
           ))}
         </div>
