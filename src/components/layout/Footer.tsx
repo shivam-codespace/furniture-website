@@ -81,8 +81,8 @@ const SOCIALS = [
 export function Footer() {
   return (
     <footer className="bg-dark text-white">
-      <div className="container-luxury grid grid-cols-2 gap-x-8 gap-y-12 py-16 md:grid-cols-6 md:py-20">
-        <div className="col-span-2 flex flex-col gap-5">
+      <div className="container-luxury grid grid-cols-3 gap-x-3 gap-y-10 py-12 sm:gap-x-6 md:grid-cols-6 md:gap-x-8 md:gap-y-12 md:py-20">
+        <div className="col-span-3 flex flex-col gap-5 md:col-span-2">
           <Logo light />
           <p className="max-w-xs text-sm leading-relaxed text-white/50">
             Crafted by generations.
@@ -104,12 +104,14 @@ export function Footer() {
         </div>
 
         {FOOTER_LINKS.map((group) => (
-          <div key={group.title} className="flex flex-col gap-4">
-            <h5 className="text-xs font-semibold uppercase tracking-[0.2em] text-white/40">{group.title}</h5>
-            <ul className="flex flex-col gap-3">
+          <div key={group.title} className="flex flex-col gap-3 md:gap-4">
+            <h5 className="text-[10px] font-semibold uppercase tracking-[0.15em] text-white/40 sm:text-xs sm:tracking-[0.2em]">
+              {group.title}
+            </h5>
+            <ul className="flex flex-col gap-2 md:gap-3">
               {group.links.map((link) => (
                 <li key={link.label}>
-                  <Link to={link.href} className="text-sm text-white/70 transition-colors hover:text-gold">
+                  <Link to={link.href} className="text-xs text-white/70 transition-colors hover:text-gold sm:text-sm">
                     {link.label}
                   </Link>
                 </li>
@@ -118,7 +120,7 @@ export function Footer() {
           </div>
         ))}
 
-        <div className="col-span-2 flex flex-col gap-4 md:col-span-1">
+        <div className="col-span-3 flex flex-col gap-4 md:col-span-1">
           <h5 className="text-xs font-semibold uppercase tracking-[0.2em] text-white/40">Newsletter</h5>
           <p className="text-sm text-white/60">Subscribe to get updates on new collections and offers.</p>
           <form className="flex items-center rounded-full border border-white/20 bg-white/5 p-1 pl-4">

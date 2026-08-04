@@ -14,7 +14,7 @@ export function Hero() {
   const [active, setActive] = useState(0);
 
   return (
-    <section className="relative h-[520px] w-full overflow-hidden bg-dark sm:h-[600px] lg:h-[660px]">
+    <section className="relative h-[364px] w-full overflow-hidden bg-dark sm:h-[600px] lg:h-[660px]">
       {SLIDES.map((src, i) => (
         <img
           key={src}
@@ -39,7 +39,7 @@ export function Hero() {
         >
           <motion.h1
             variants={fadeUp}
-            className="text-balance font-heading text-4xl font-medium leading-[1.1] text-white sm:text-5xl lg:text-[3.5rem]"
+            className="text-balance font-heading text-[25px] font-medium leading-[1.1] text-white sm:text-5xl lg:text-[3.5rem]"
           >
             Furniture Crafted
             <br />
@@ -53,10 +53,13 @@ export function Hero() {
           <motion.div variants={staggerItem} className="mt-2">
             <Link
               to="/shop"
-              className="group inline-flex h-12 items-center gap-2.5 rounded-full border border-white/50 px-6 text-sm font-medium text-white transition-all duration-300 hover:border-white hover:bg-white/10"
+              className="group inline-flex h-[34px] items-center gap-[7px] rounded-full border border-white/50 px-[17px] text-[10px] font-medium text-white transition-all duration-300 hover:border-white hover:bg-white/10 sm:h-12 sm:gap-2.5 sm:px-6 sm:text-sm"
             >
               Explore Collections
-              <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" strokeWidth={2} />
+              <ArrowRight
+                className="size-[11px] transition-transform group-hover:translate-x-1 sm:size-4"
+                strokeWidth={2}
+              />
             </Link>
           </motion.div>
         </motion.div>
