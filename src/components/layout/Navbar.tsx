@@ -12,7 +12,7 @@ const NAV_LINKS = [
   { label: "Custom Studio", href: "/custom-studio" },
   { label: "Our Story", href: "/our-story" },
   { label: "Why Vaanam", href: "/why-vaanam" },
-  { label: "Support", href: "/" },
+  { label: "Support", href: "/support" },
 ];
 
 export function Navbar() {
@@ -49,10 +49,8 @@ export function Navbar() {
           </Link>
 
           <nav className="hidden items-center gap-8 lg:flex">
-            {NAV_LINKS.map((link, i) => {
-              // Several nav items still point at "/" as a placeholder until their
-              // pages exist — only the first (Home) should ever claim that match.
-              const active = link.href === pathname && NAV_LINKS.findIndex((l) => l.href === link.href) === i;
+            {NAV_LINKS.map((link) => {
+              const active = link.href === pathname;
               return (
                 <Link
                   key={link.label}

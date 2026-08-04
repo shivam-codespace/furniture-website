@@ -6,15 +6,36 @@ import { Logo } from "@/components/common/Logo";
 const FOOTER_LINKS = [
   {
     title: "Shop",
-    links: ["Beds", "Sofas", "Dining", "Dressing Tables", "Office Furniture", "Mattresses & Pillow", "Chairs & Tables"],
+    links: [
+      { label: "All Furniture", href: "/shop" },
+      { label: "Beds", href: "/shop" },
+      { label: "Sofas", href: "/shop" },
+      { label: "Dining Sets", href: "/shop" },
+      { label: "Wardrobes", href: "/shop" },
+      { label: "TV Units", href: "/shop" },
+      { label: "View All", href: "/shop" },
+    ],
   },
   {
     title: "Company",
-    links: ["Our Story", "Why Vaanam", "Sustainability", "Careers", "Contact Us"],
+    links: [
+      { label: "Why Vaanam", href: "/why-vaanam" },
+      { label: "Our Story", href: "/our-story" },
+      { label: "Custom Studio", href: "/custom-studio" },
+      { label: "Support", href: "/support" },
+      { label: "Careers", href: "/" },
+      { label: "Store Locator", href: "/" },
+    ],
   },
   {
-    title: "Support",
-    links: ["Delivery & Installation", "Returns & Refunds", "Warranty", "FAQs", "Track Order"],
+    title: "Policies",
+    links: [
+      { label: "Shipping Policy", href: "/" },
+      { label: "Returns & Refunds", href: "/" },
+      { label: "Warranty Policy", href: "/" },
+      { label: "Privacy Policy", href: "/" },
+      { label: "Terms & Conditions", href: "/" },
+    ],
   },
 ];
 
@@ -64,10 +85,22 @@ export function Footer() {
         <div className="col-span-2 flex flex-col gap-5">
           <Logo light />
           <p className="max-w-xs text-sm leading-relaxed text-white/50">
-            Crafted by our family for over 75 years.
+            Crafted by generations.
             <br />
-            Built for your family.
+            Built on trust, transparency and timeless craftsmanship.
           </p>
+          <div className="flex items-center gap-3">
+            {SOCIALS.map(({ icon: Icon, label }) => (
+              <a
+                key={label}
+                href="#"
+                aria-label={label}
+                className="flex size-9 items-center justify-center rounded-full border border-white/15 text-white/70 transition-colors hover:border-gold hover:text-gold"
+              >
+                <Icon className="size-4" />
+              </a>
+            ))}
+          </div>
         </div>
 
         {FOOTER_LINKS.map((group) => (
@@ -75,9 +108,9 @@ export function Footer() {
             <h5 className="text-xs font-semibold uppercase tracking-[0.2em] text-white/40">{group.title}</h5>
             <ul className="flex flex-col gap-3">
               {group.links.map((link) => (
-                <li key={link}>
-                  <Link to="/" className="text-sm text-white/70 transition-colors hover:text-gold">
-                    {link}
+                <li key={link.label}>
+                  <Link to={link.href} className="text-sm text-white/70 transition-colors hover:text-gold">
+                    {link.label}
                   </Link>
                 </li>
               ))}
@@ -86,8 +119,8 @@ export function Footer() {
         ))}
 
         <div className="col-span-2 flex flex-col gap-4 md:col-span-1">
-          <h5 className="text-xs font-semibold uppercase tracking-[0.2em] text-white/40">Stay Connected</h5>
-          <p className="text-sm text-white/60">Get updates on new collections and offers.</p>
+          <h5 className="text-xs font-semibold uppercase tracking-[0.2em] text-white/40">Newsletter</h5>
+          <p className="text-sm text-white/60">Subscribe to get updates on new collections and offers.</p>
           <form className="flex items-center rounded-full border border-white/20 bg-white/5 p-1 pl-4">
             <input
               type="email"
@@ -102,18 +135,6 @@ export function Footer() {
               <ArrowRight className="size-4" strokeWidth={2} />
             </button>
           </form>
-          <div className="mt-2 flex items-center gap-3">
-            {SOCIALS.map(({ icon: Icon, label }) => (
-              <a
-                key={label}
-                href="#"
-                aria-label={label}
-                className="flex size-9 items-center justify-center rounded-full border border-white/15 text-white/70 transition-colors hover:border-gold hover:text-gold"
-              >
-                <Icon className="size-4" />
-              </a>
-            ))}
-          </div>
         </div>
       </div>
 
